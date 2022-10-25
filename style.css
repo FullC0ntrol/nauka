@@ -1,58 +1,127 @@
-body{
-    padding: 0;
-    margin: 0;
-    background: #3d39a8
-    }
-.site-nav{
-    display:flex;
-    height: 20px;
-    width: 50%;
-    background: #4e5279;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-
+*{
+    font-family: cursive;
 }
-#site-nav-trigger{
-    
-    display: flex;
-    border 0;
-    border-radius: 5px;
-    background: #ffffff;
-    align-items: center;
-
+h1 {
+    font-family: cursive;
+    color: brown;
 }
-.site-menu{
-    display: flex;
-    box-sizing: border-box;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    height: 100%;
-    width: 300px;
-    background: #34b399;
-}
-.site-menu ul{
-    padding: 0;
-    list-style-type: none;
-    margin: 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-.site-menu li{
-    background: #ffffff;
-    margin-top: 20px;
-    color: #323f76;
-    border-radius: 5px;
-    flex-basis: 100%;
-}
-.site-menu a {
-    display: flex;
-    padding: 10px;
-    box-sizing: border-box;
+a{
+    color: crimson;
     text-decoration: none;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+}
+a:visited{
+    color: gray;
+}
+a:hover{
+    text-decoration: underline;
+    color: deepskyblue;
+}
+
+#navbar{
+    text-align: center;
+    font-size: 150%;
+    padding: 15px;
+    background-color: aliceblue;
+    border-top: 2px dashed grey;
+    border-bottom: 2px dashed grey;
+}
+#content{
+    width: 1000px;
+    text-align: justify;
+    margin: ;
+    display: inline-block;
+    background-color: bisque;
+    font-size: 15px;
+}
+#akapit1, #akapit2{
+    box-sizing: border-box;
+    width: 45%;
+    line-height: 200%;
+    padding: 50px;
+}
+#akapit1{
+    float: right;
+}
+#akapit2{
+    float: left;
+}
+#sidemenu{
+    width: 150px;
+}
+#footer{
+    height: auto;
+    text-align: center;
+}
+span{
+    font-weight: bold;
+}
+#container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid grey;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+    text-align: center;
+    font-size: 250%;
+    color: brown;
+    background-color: antiquewhite;
+}
+#header > span{
+    padding: 25px;
+    display: block;
+}
+#navbar a{
+    margin: 0px 30px;
+}
+#main{
+    background-color: beige;
+    font-size: 0;
+}
+#sidemenu{
+    line-height: 200%;
+    display: inline-block;
+    width: 150px;
+    float: right;
+    width: 200px;
+    font-size: 15px;
+}
+#footer{
+    border-top: 1px solid grey;
+    padding: inherit;
+    font-size: 18px;
+    text-align: center;
+    color: grey;
+    font-style: italic;
+    background-color: aliceblue;
+}
+/*ANIMACJE I TRANSFORMACJE*/
+#title{
+    transition: all 1s;
+    transition-timing-function: linear;
+}
+#title:hover{
+    color:blue;
+    font-size: 130%;
+    cursor: pointer;
+    transform: translate(100px);
+    transform: rotate(4deg);
+}
+#title::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 450px;
+    background-color: blue;
+    position: absolute;
+    bottom: auto;
+    left: calc(50% - 225px);
+    transition: all 1s ease-out;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+#title:hover::after{
+    transform: scaleX(1);
 }
