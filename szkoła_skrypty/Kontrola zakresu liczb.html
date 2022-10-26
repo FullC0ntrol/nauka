@@ -1,0 +1,25 @@
+<h1>Kontrola zakresu liczb</h1>
+
+<form action="" method="post">
+    <label for="liczba">Podaj liczbe</label>
+    <input type="number" name="liczba" id="liczba">
+    <button type="button" onclick="checkNumber()">Wyślij</button>
+</form>
+
+<script>
+    function checkNumber(){
+        const MIN = 0;
+        const MAX = 10;
+        let result;
+        let number = document.getElementById("liczba").value;
+        console.log(number);
+        
+        if(number >= MIN && number <= MAX){
+            result="dane OK";
+        }
+        else{
+            result="dane nieprawidlowe";
+        }
+        document.querySelector("#info").innerHTML=result;
+    }
+</script>

@@ -1,0 +1,27 @@
+<h1>Walidacja formularzy zakres liczb 0-10</h1>
+
+<form action="write2DB.php" method="post">
+    <label for="name">Wprowadz liczbe  z zakresu 1-10</label><br>
+    <input type="number" name="name" id="num">
+    <button id="button" type="button" onclick="checkNumber()">
+    Wyślij</button>
+</form>
+<p>* pola wymagane</p>
+
+<script>
+
+    function checkNumber(){
+        const MIN=1;
+        const MAX=10;
+        let liczba = document.getElementById("num").value;
+        if(liczba >= MAX){
+            alert("Liczba jest za duza");
+        }
+        else if(liczba <= MIN){
+            alert("Liczba jest za mala");
+        }
+        else if(liczba < MAX && liczba > MIN){
+            alert("Liczba miesci sie w przedziale");
+        }
+        
+</script>

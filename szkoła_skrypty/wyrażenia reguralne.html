@@ -1,0 +1,32 @@
+<h1>Wyrażenia reguralne - wyszukiwanie słów</h1>
+
+<script>
+    let tekst = "Być albo nie być";
+    document.write(tekst + "<br>");
+    let wzorzec  = /być/i;
+    let pozycja = tekst.search( wzorzec );
+    document.write("Wyraz znaleziono na pozycji: " + pozycja);
+</script>
+
+<br><br><b>funkcja .search podaje pozycje znalezionego elementu, jeżeli takiego elementu nie ma funckja zwróci -1.Jeżeli chcemy żeby funkcja ignorowała wielkość liter to dodajemy /słowo/i</b>
+
+<br>
+<br><h1>Wyszukiwanie liczb</h1>
+<script>
+    let numer = "34-211 Sucha";
+    document.write(numer + "<br>");
+    let wzorzecTel  = /\d{2}-\d{3}/;
+    let pozycjaTel = numer.search( wzorzecTel );
+    document.write("Wyraz znaleziono na pozycji: " + pozycjaTel);
+</script>
+
+<br>
+<br><h1>Wyszukiwanie nazw pliku</h1>
+
+<script>
+    let text = "ikona jest w pliku logo.gif";
+    document.write(text + "<br>");
+    let wzor  = /\S\.gif/i;
+    let pozycjaa = text.search( wzor );
+    document.write("Wyraz znaleziono na pozycji: " + pozycjaa);
+</script>

@@ -1,0 +1,29 @@
+<h1>Dodawanie / Usuwanie elementu przed innym elementem</h1>
+
+<div id="div1">
+    <p id="p1">Pierwszy akapit</p>
+    <p id="p2">Drugi akapit</p>
+    <p id="p3">Trzeci akapit</p>
+</div>
+
+<script>
+//    ### Dodawanie tekstu przed inny tekst
+    
+//    let akapit = document.createElement("p");
+//    let content = document.createTextNode("nowy akapit");
+//    akapit.appendChild( content );
+//    let position = document.querySelector("#div1");
+//    let before=document.querySelector("#p1");
+//    position.insertBefore(content , before);
+    
+//    document.querySelector("#div1").insertBefore(document.createTextNode("Coś przed") , document.querySelector("p"));
+    
+//    ### Usuwanie tekstu
+    
+//    document.querySelector("#div1").removeChild(document.getElementById("p1"));
+    
+    let p2=document.getElementById("p2");
+    let p3=document.getElementById("p3");
+    document.querySelector("#div1").replaceChild(p3,p2);
+    
+</script>

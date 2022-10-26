@@ -1,0 +1,23 @@
+<h1>Kontrola nazwy</h1>
+
+<form action="" method="post">
+    <label for="liczba">Podaj imie</label>
+    <input type="number" name="liczba" id="imie">
+    <button type="button" onclick="checkNumber()">Wyślij</button>
+</form>
+
+<script>
+    function checkImie(){
+        let result;
+        let imie = document.getElementById("#imie").value;
+        console.log(number);
+        
+        if( imie == ""){
+            result = "Pole nie moze byc puste";
+        }
+        else{
+            result = "dane sa wypelnione";
+        }
+        document.querySelector("#info").innerHTML=result;
+    }
+</script>

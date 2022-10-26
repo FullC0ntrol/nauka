@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+<p id="time"></p>
+<script>
+    function time(){
+        var now = new Date();
+        let hours = now.getHours().toString();
+        let minutes = now.getMinutes().toString();
+        let secound = now.getSeconds();
+        let secounds = secound.toString();
+        let currentTime = hours + ':' + minutes + ':' + secound;
+        let place = document.getElementById("time");
+        if (secound < 10){
+            secounds="JD";
+        }
+        if(now.getMinutes > 10){
+            minutes="0"+minutes;
+        }
+        place.innerHTML=currentTime;
+    }
+    setInterval( time, 1000 );
+</script> 
+</body>
+</html>
+

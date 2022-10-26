@@ -1,0 +1,24 @@
+<h3>Storage</h3>
+<h4></h4>
+<form>
+<input type="text" id="rrr">
+<input type="submit" id="bbb"></form>
+<script>
+    //  localStorage służy zapisywaniu informacji w pamięci lokalnego komputera i 
+    //  nie zostaje usunięta w momęcie zamknięcia strony
+    
+    localStorage.setItem("myElement", "Wartość 1-go elementu"); //Pierwszy sposób 
+    localStorage.myElement2="Drugi element"+"<br>"; //Drugi sposób
+    localStorage["myElement3"]="Trzeci element"; //Trzeci sposób
+    
+    document.querySelector("h4").innerHTML=localStorage.myElement;
+    document.write(localStorage.getItem("myElement2"));
+    
+    localStorage.removeItem("myElement");
+    document.write(localStorage.getItem("myElement") + "<br>");
+    
+    sessionStorage.Myelement="JD";
+    document.write(sessionStorage.getItem("Myelement"));
+    
+    
+</script>
