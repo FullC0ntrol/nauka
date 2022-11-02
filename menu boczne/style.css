@@ -13,14 +13,15 @@ body{
     box-sizing: border-box;
 
 }
-#site-nav-trigger{
-    
-    display: flex;
-    border 0;
+button{
+    display:flex;
+    border 0px;
     border-radius: 5px;
-    background: #ffffff;
+    background: #ff0000;
     align-items: center;
-
+    right: 0px;
+    position: absolute;
+    width: 300px;
 }
 .site-menu{
     display: flex;

@@ -1,0 +1,23 @@
+<h3>Pobieranie wartości elementu</h3>
+
+<p id="test">Teskst <b>ege szege</b> fiu fiu la la </p>
+<button id="text">Pokaz tekst</button><br><br><br>
+
+<input type="text" id="name" value="Micky Mouse">
+<button id="inputText">Pokaz Wpisany tekst</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    $( function(){
+        $("#text").click( function(){
+            alert( $("#test").html() ); //można dać .text zamiast .html
+                });
+    });
+    $( function(){
+        $("#inputText").click( function(){
+            alert( $("#name").val() );
+                });
+    });
+</script>
