@@ -1,0 +1,26 @@
+<h3>jQueary animate- wartosci wzgledne i predefiniowane</h3>
+
+<button>Uruchom animacje</button>
+<div></div>
+<style>
+    div{
+        background-color: green;
+        height: 250px;
+        width: 250px;
+        position: absolute;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $("button").click( function(){
+        $("div").animate({
+            left: '250px',
+            height: '+=250px',
+            width: 'toggle'
+            })
+        $("div").animate({
+            left: '0px'
+        })
+        })
+</script>
