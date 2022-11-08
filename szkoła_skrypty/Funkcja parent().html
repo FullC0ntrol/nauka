@@ -1,0 +1,25 @@
+<h3>Funkcja parent() odwołuje się do rodzica</h3>
+<div class="ancestors">
+  <div style="width: 300px">
+    div (grandparent)
+    <p>
+      p (direct parent)
+      <span>span</span>
+    </p>
+  </div>
+</div>
+<style>
+  .ancestors * {
+    display: block;
+    border: 2px solid rgb(0, 0, 0);
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+  }
+</style>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+  $(function (){
+    $("span").parent().css({ color: "red", border: "2px solid red" });
+  });
+</script>
