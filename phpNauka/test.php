@@ -9,14 +9,11 @@ echo gettype($bool) . "<br>";
 echo gettype($float) . "<br>";
 echo gettype($int) . "<br>";
 echo gettype($text);
-<br>
 $slowo1 = "World!";
 $slowo2 = "Dolly";
 $slowo3 = "Hello World! LALLA LALLALA LALLA";
 echo str_replace($slowo1, $slowo2, $slowo3);
 
-//takietam
-<h1>Nauka PHP</p>
     //Tablice indeksowane
     $cars = array('Volvo', 'BMW', 'Toyota');
     $fruits = array('Apple'=>"35", 'Banana'=>"37", 'orange'=>"4");
