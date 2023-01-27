@@ -1,0 +1,15 @@
+article{
+    display: flex;
+    flex-direction: column;
+}
+.info {
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+button{
+    height: 40px;
+    width: 100px;
+    flex-direction: row;
+}

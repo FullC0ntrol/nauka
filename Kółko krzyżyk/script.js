@@ -1,8 +1,15 @@
 const fieldsElements = document.querySelectorAll('.gra');
 
-let activePlayer = 'X';
+const PLAYER1 = 'X';
+const PLAYER2 = 'O';
+let round = 1;
 
-const fields = ['','','','','','','','','',];
+const field = [
+    ['A','B','C'],
+    ['D','E','F'],
+    ['G','H','F']];
+
+let liczbaRund = document.getElementById("round");
 
 const winningConditions = [
     [0, 1, 2],
@@ -14,20 +21,19 @@ const winningConditions = [
     [0, 4, 8],
     [6, 4, 2]
 ]
+fieldsElements.forEach(field => {
+field.addEventListener('click', pick)});
 
-const validateGame = () => {
-    for(let i = 0; i <= 8; i++){
-        
-    }
+function pick(event) {
+    const {row, column} = event.target.dataset;
+    const turn = round % 2 === 0 ? PLAYER2 : PLAYER1;
+    event.target.classList.add("board_item-filled-" + turn);
+    liczbaRund.innerHTML = round;
+    round++;
+    field[row][column] = turn;
+    check();
 }
 
-fieldsElements.forEach(fields => {
-    fields.addEventListener('click', e => {
-        const { pos } = e.target.dataset;
-        if(fields[pos] === ''){
-            fields[pos] = activePlayer;}
-            e.target.classList.add('board_item-filled-'+activePlayer);
-            validateGame();
-            activePlayer = activePlayer === 'X' ? 'O' : 'X';
-    });
-});
+function check() {
+    
+}

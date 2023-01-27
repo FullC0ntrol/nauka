@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math</title>
+  </head>
+  <body>
+    <h1>Math i Date</h1>
+    <div class="conteiner">
+    <div id="math">Math:<br></div>
+    <div id="date">Date:</div></div>
+    <style>
+        html{
+            background-color: rgb(62, 59, 59);
+            color: white;
+            text-align: center;
+        } 
+        .conteiner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #math,#date{
+            min-height: 100px;
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 15px;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        var math = document.getElementById("math");
+        var date = document.getElementById("date");
+        var liczba = prompt("Podaj liczbę: ", "0");
+        math.innerHTML += "Liczba: " + liczba + "<br>";
+        math.innerHTML += "Abs: " + Math.abs(liczba) + "<br>";
+        math.innerHTML += "Round: " + Math.round(liczba) + "<br>";
+    </script>
+  </body>
+</html>

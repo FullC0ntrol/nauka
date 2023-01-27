@@ -20,5 +20,11 @@
     sessionStorage.Myelement="JD";
     document.write(sessionStorage.getItem("Myelement"));
     
-    
+    const text = document.querySelector("#rrr").value;
+    const submit = document.querySelector("#bbb");
+
+    submit.addEventListener("click", function(){
+        localStorage.element="X14D";
+        console.log(text);
+    });
 </script>
